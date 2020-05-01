@@ -1,28 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Form v-on:modelView="display1=false;display2=true;model=$event" v-if="display1"></Form>
+    <Strings v-on:backToModels="display1=true;display2=false;" v-bind:model="model" v-if="display2"></Strings>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Form from './components/form'
+import Strings from './components/strings'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Form,
+    Strings
+  },
+  data: function(){
+    return{
+      display1: true,
+      display2: false
+    }
   }
+  // methods: {
+  //   modelSelect: function(){
+  //     return{
+  //     display1:false,
+  //     display2:true
+  //     }
+  //   }
+  // }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
