@@ -42,7 +42,7 @@
             <img class="card-img-top" :src="pressman" alt="Card image cap" />
             <div class="card-body">
               <h5 class="card-title text-center">Pressman</h5>
-              <div class="text-center">Starting at $2,700</div>
+              <div class="text-center">Starting at $3,350</div>
             </div>
           </div>
           <div style="cursor: pointer;" @click="$emit('modelView', 'guitar')" class="card">
@@ -66,10 +66,6 @@ import jbass from "@/assets/image/jbass.jpg";
 import pressman from "@/assets/image/pressman.jpg";
 import guitar from "@/assets/image/guitar.jpg";
 
-// import neckthrough from '@/assets/image/neckthru1-min.jpg'
-// import neckthrough from '@/assets/image/neckthru1-min.jpg'
-// import neckthrough from '@/assets/image/neckthru1-min.jpg'
-// import neckthrough from '@/assets/image/neckthru1-min.jpg'
 
 export default {
   data: function() {

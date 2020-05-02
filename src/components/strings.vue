@@ -10,8 +10,6 @@
             <div style="padding-bottom:45px" class="col">
               <button @click="$emit('backToModels')" type="button" class="btn btn-secondary">Go back</button>
           </div>
-
-
         </div>
       </div>
 
@@ -26,7 +24,7 @@
                   <span class="big-txt">{{fourString}}</span>
                 </h2>
                 <div class="card-btn">
-                  <a href class="btn btn--primary">Select</a>
+                  <a @click="$emit('stringSelect','4-String')" style="color:#FFF;" class="btn btn--primary">Select</a>
                 </div>
               </div>
             </div>
@@ -41,7 +39,7 @@
                   <span class="big-txt">{{fiveString}}</span>
                 </h2>
                 <div class="card-btn">
-                  <a href class="btn btn--primary">Select</a>
+                  <a @click="$emit('stringSelect','5-String')" style="color:#FFF;" class="btn btn--primary">Select</a>
                 </div>
               </div>
             </div>
@@ -56,7 +54,7 @@
                   <span class="big-txt">4,750</span>
                 </h2>
                 <div class="card-btn">
-                  <a href class="btn btn--primary">Select</a>
+                  <a @click="$emit('stringSelect','6-String')" style="color:#FFF;" class="btn btn--primary">Select</a>
                 </div>
               </div>
             </div>
@@ -68,10 +66,10 @@
                 <h6>6-String</h6>
                 <h2>
                   <span class="small-title">$</span>
-                  <span class="big-txt">4,750</span>
+                  <span class="big-txt">5,650</span>
                 </h2>
                 <div class="card-btn">
-                  <a href class="btn btn--primary">Select</a>
+                  <a @click="$emit('stringSelect','6-String')" style="color:#FFF;" class="btn btn--primary">Select</a>
                 </div>
               </div>
             </div>
@@ -105,14 +103,14 @@ export default {
     }
     if (this.model == "pressman") {
       return {
-        fourString: "4,150",
-        fiveString: "4,350"
+        fourString: "3,350",
+        fiveString: "N/A"
       };
     }
     if (this.model == "guitar") {
       return {
-        fourString: "4,150",
-        fiveString: "4,350"
+        fourString: "N/A",
+        fiveString: "N/A"
       };
     }
   },
