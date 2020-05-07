@@ -3,7 +3,7 @@ import App from './App.vue'
 import BootstrapVue from 'bootstrap-vue'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
-
+import Vuelidate from 'vuelidate'
 
 import "./assets/css/settings.css"
 import "./assets/css/meanmenu.css"
@@ -13,8 +13,7 @@ import "./assets/css/style.css"
 
 
 
-
-
+Vue.use(Vuelidate)
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 
